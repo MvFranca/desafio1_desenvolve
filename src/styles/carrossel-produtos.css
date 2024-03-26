@@ -151,7 +151,7 @@
 }
 
 .carrossel-produtos .container-outdoor{
-    max-width: 81.25rem;
+    max-width: var(--max-view-2);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -181,7 +181,7 @@
 }
 
 .carrossel-produtos .banner .banner-container{
-    max-width: 81.25rem;
+    max-width: var(--max-view-2);
     width: 100%;
     display: flex;
     justify-content: space-between;

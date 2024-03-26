@@ -13,6 +13,7 @@
     --cor-text-secundario: #6E6E6E;
     --fonte-principal: "Inter", sans-serif;
     --max-view: 100.75rem;
+    --max-view-2: 75rem;
 }
 
 header, main,footer{
@@ -33,6 +34,12 @@ body{
     min-width: 55px;
     border-radius: 50%;
     position: absolute !important;
+    transition: 0.2s all;
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover{
+    min-height: 58px;
+    min-width: 58px;
 }
 
 .swiper-button-prev{
@@ -51,7 +58,7 @@ body{
 
 
 .swiper-button-prev::after, .swiper-button-next::after{
-    font-size: 1.8rem !important;
+    font-size: 1.5rem !important;
 }
 
 @media screen and (max-width:750px) {   
