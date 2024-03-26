@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*, body, html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root {
+    --cor-principal: #009667;
+    --cor-secundaria: #F2F2F2;
+    --cor-text-secundario: #6E6E6E;
+    --fonte-principal: "Inter", sans-serif;
+    --max-view: 100.75rem;
+}
+
+header, main,footer{
+    font-family: var(--fonte-principal);
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.swiper-button-prev, .swiper-button-next{
+    background-color: var(--cor-principal);
+    border: 1px solid #fff;
+    color: #FFF !important;
+    min-height: 55px;
+    min-width: 55px;
+    border-radius: 50%;
+    position: absolute !important;
+}
+
+.swiper-button-prev{
+    left: 40px !important;
+}
+
+.swiper-button-next{
+    right: 40px !important;
+}
+
+.swiper-container{
+    position: relative !important;
+    max-width: var(--max-view);
+}
+
+
+
+.swiper-button-prev::after, .swiper-button-next::after{
+    font-size: 1.8rem !important;
+}
+
+@media screen and (max-width:750px) {   
+    /* .swiper-button-prev, .swiper-button-next{
+        display: none !important;
+    } */
+
+    .swiper-button-prev{
+        left: 20px !important;
+    }
+    
+    .swiper-button-next{
+        right: 20px !important;
+    }
+
+    .swiper-button-prev, .swiper-button-next{
+
+        min-height: 40px;
+        min-width: 40px;
+        height: 40px !important;
+        width: 40px !important;
+
+    }
+    
+    .swiper-button-prev::after, .swiper-button-next::after{
+        font-size: 1.3rem !important;
+    }
+}

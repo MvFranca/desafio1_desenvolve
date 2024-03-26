@@ -1,0 +1,324 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--cor-text-secundario);
+    width: 100%;
+    overflow: hidden;
+}
+
+.header-top{
+    
+    background-color: var(--cor-principal);
+    height: 4.375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+.header-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    height: 5.625rem;
+    padding: 1rem;
+}
+
+.header-bottom nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.625rem;
+    width: max-content;
+}
+
+.header-bottom nav a{
+    text-decoration: none;
+    color: #000;
+    transition: 0.2s all;
+}
+
+.header-bottom nav a:hover{
+    transform: translateY(-3px);
+    color: var(--cor-principal);
+}
+
+.header-bottom nav .input-search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: .0938rem solid var(--cor-text-secundario);
+    padding: 5px;
+    gap: .5rem;
+    width: 230px;
+}
+
+
+.header-bottom nav .input-search img{
+    width: 17px;
+    height: 17px;   
+
+}
+
+
+
+.header-bottom nav .input-search input{
+    background-color: none;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+
+
+.header-bottom nav .input-search input::placeholder{
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-size: .9rem;
+}
+
+.header-bottom nav a img{
+    width: 13px;
+    transition: 0.2s all;
+}
+
+.header-titulo{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    color: var(--cor-text-secundario);
+    font-size: 1.25rem;
+}
+
+
+.carrossel-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.carrossel-container .carrossel-principal .imagem-detalhes{
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.carrossel-container .carrossel-principal .imagem-detalhes::-webkit-scrollbar{
+   display: none;
+}
+
+
+.carrossel-container .carrossel-principal img{
+    width: 100%;
+    max-width: 1550px;
+    scroll-snap-align: start;
+}
+
+.carrossel-container .detalhes-loja{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F2F2;
+    border-bottom: 1px solid var(--cor-text-secundario);
+    max-width: var(--max-view);
+    gap: 6rem;
+    padding: 1rem;
+    font-weight: bold;
+    color: var(--cor-text-secundario);
+    text-align: center;
+    overflow: hidden;
+}
+
+
+.carrossel-container .detalhes-loja .elementos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    gap: .5rem;
+    width: 200px;
+    height: 120px;
+}
+
+.carrossel-container .detalhes-loja #frete img{
+    width: 40px;
+} 
+
+.carrossel-container .detalhes-loja #bag img{
+    width: 30px;
+} 
+
+.carrossel-container .detalhes-loja #cifrao img{
+    width: 20px;
+} 
+
+
+footer{
+    background-color: var(--cor-principal);
+    color: #fff;
+    min-height: 9.375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 4rem;
+    
+}
+
+footer .container-footer{
+    max-width: 1200px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container-footer .footer-esquerda{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #fff;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 2.5rem ;
+}
+
+footer .container-footer .footer-esquerda ul{
+    list-style: none;
+}
+
+footer .container-footer .footer-direita{
+    width: 50%;
+    padding: 0 2.5rem ;
+    font-weight: bold;
+}
+
+footer .container-footer .footer-direita p{
+    max-width: 400px;
+    text-align: center;
+}
+
+.header-bottom nav .search-branco{
+    display: none;
+}
+
+@media screen and (max-width: 980px) {
+    .header-bottom nav .input-search{
+        min-width: 40px;
+        width: 40px;
+        min-height: 40px;
+        border-radius: 6px;
+        border: none;
+        background-color: var(--cor-principal);
+    }
+    .header-bottom nav .input-search input, .header-bottom nav img{
+        display: none;
+    }
+    
+    .header-bottom nav .search-branco{
+        display: block;
+    }
+
+}
+
+
+
+@media screen and (max-width:850px) {
+
+    .header-bottom nav{
+        gap: 1.5rem;
+    }
+
+    .header-titulo{
+        font-size: 1rem;
+    }
+
+    .header-titulo img{
+        width: 25px;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .header-titulo h1{
+        display: none;
+    }
+
+    .header-bottom nav a{
+        font-size: .9rem;
+    }
+
+    .carrossel-container .carrossel-principal .image, 
+    .carrossel-container .carrossel-principal .imagem-detalhes{
+        min-height: 160px;
+    }
+
+    .carrossel-container .detalhes-loja{
+        height: 7.25rem;
+        gap: 1rem;
+    }
+
+    .carrossel-container .detalhes-loja .elementos{
+        width: 100px;
+        font-size: .85rem;
+    }
+
+    .carrossel-container .detalhes-loja #frete img{
+        width: 25px;
+    }
+
+    .carrossel-container .detalhes-loja #bag img{
+        width: 18px;
+    } 
+    
+    .carrossel-container .detalhes-loja #cifrao img{
+        width: 12px;
+    } 
+    .header-top{
+        font-size: .9rem;
+    }
+
+    
+    footer .container-footer .footer-esquerda{
+        gap: .5rem;
+    }
+
+    footer .container-footer .footer-esquerda ul li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    footer .container-footer{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    footer .container-footer .footer-esquerda, footer .container-footer .footer-direita{
+        width: 100%;
+        border: none;
+    }
+
+    footer .container-footer .footer-direita{
+        border-top: 1px solid #fff;
+        padding-top: 1rem;
+    }
+
+}
