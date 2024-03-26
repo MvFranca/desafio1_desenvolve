@@ -83,6 +83,14 @@ body{
 
     }
     
+    .swiper-button-prev:hover, .swiper-button-next:hover{
+        min-height: 45px;
+        min-width: 45px;
+        height: 45px !important;
+        width: 45px !important;
+    }
+    
+
     .swiper-button-prev::after, .swiper-button-next::after{
         font-size: 1.3rem !important;
     }
