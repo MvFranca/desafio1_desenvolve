@@ -64,7 +64,7 @@
     width: 100%;
 
     max-width: 1200px;
-    height: 400px;
+    height: max-content;
     display: flex;
     gap: 2rem;
     justify-content: space-between;
@@ -72,6 +72,7 @@
     /* margin-bottom: 2rem; */
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    padding: 10px 0;
 }
 
 .carrossel-produtos .carrossel::-webkit-scrollbar{
@@ -79,22 +80,26 @@
 }
 
 .carrossel-produtos .carrossel .produto{
+    max-height: 400px;
     height: 100%;
     width: 25%;
     max-width: 16.625rem;
-    background-color: var(--cor-secundaria);
+    /* background-color: var(--cor-secundaria); */
+    background-color: #f4f4f4;
     border: 1px solid var(--cor-text-secundario);
-    border-radius: .625rem;
+    border-radius: 8px;
     scroll-snap-align: start;
     cursor: pointer;
     transition: 0.2s all;
     overflow: hidden;
+
+    box-shadow: 10px 10px 10px 10px #0000;
 }
 
 
 .carrossel-produtos .carrossel .produto:hover{
     background-color: #dedede;
-    padding: .5rem;
+    transform: translateY(-8px);
 }
 
 .carrossel-produtos .carrossel .produto .informacoes{
@@ -231,6 +236,25 @@
     align-items: center;
 }
 
+.carrossel-produtos .carrossel .produto{
+    position: relative;
+}
+
+.carrossel-produtos .carrossel .produto .desconto{
+    background-color: var(--cor-principal);
+    width: max-content;
+    height: max-content;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    
+    color: #FFF;
+    font-weight: bold;
+}
+
 
 @media screen and (max-width: 1010px) {
     .carrossel-produtos .carrossel .produto{
@@ -311,7 +335,7 @@
     }
 
     .carrossel-produtos .carrossel{
-        height: 300px;
+        height: max-content;
     }
 
     .carrossel-produtos .carrossel .produto img{

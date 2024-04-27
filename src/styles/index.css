@@ -9,7 +9,7 @@
 
 :root {
     --cor-principal: #009667;
-    --cor-secundaria: #F2F2F2;
+    --cor-secundaria: #f4f4f4;
     --cor-text-secundario: #6E6E6E;
     --fonte-principal: "Inter", sans-serif;
     --max-view: 125rem;
@@ -33,7 +33,7 @@ body{
     min-height: 55px;
     min-width: 55px;
     border-radius: 50%;
-    position: absolute !important;
+    position: absolute ;
     transition: 0.2s all;
 }
 
@@ -51,7 +51,7 @@ body{
 }
 
 .swiper-container{
-    position: relative !important;
+    position: relative;
     max-width: var(--max-view);
 }
 
