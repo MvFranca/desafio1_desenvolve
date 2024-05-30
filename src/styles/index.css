@@ -23,6 +23,7 @@ header, main,footer{
 body{
     width: 100%;
     min-height: 100vh;
+    max-width: 100%;
     overflow-x: hidden;
 }
 
