@@ -3,21 +3,21 @@ const produtosEmOferta = [
     {
         "id": 1,
         "nome": "Floratta",
-        "imagem": "./.public/produtos/floratta.png",
+        "imagem": "./public/produtos/floratta.png",
         "descricao": "Floratta Flores Secretas é ideal para encher os dias",
         "preco": 155.91
     },
     {
         "id": 2,
         "nome": "Liz Colônia",
-        "imagem": "../public/produtos/liz-colonia.webp",
+        "imagem": "./public/produtos/liz-colonia.webp",
         "descricao": "uma fragrância feminina intensa e marcante, tra",
         "preco": 155.91
     },
     {
         "id": 3,
         "nome": "Floratta",
-        "imagem": "../public/produtos/coffe-woman.webp",
+        "imagem": "./public/produtos/coffe-woman.webp",
         "descricao": "Sua fórmula carrega o equilíbrio entre Madeira ",
         "preco": 155.91
     },
