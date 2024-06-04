@@ -3,7 +3,7 @@ const produtosEmOferta = [
     {
         "id": 1,
         "nome": "Floratta",
-        "imagem": "../public/produtos/floratta.png",
+        "imagem": "./.public/produtos/floratta.png",
         "descricao": "Floratta Flores Secretas é ideal para encher os dias",
         "preco": 155.91
     },
