@@ -15,14 +15,12 @@ const produtosEmOferta = [
         "preco": 155.91
     },
     {
-        "id": 3,
         "nome": "Floratta",
         "imagem": "./src/public/produtos/coffe-woman.webp",
         "descricao": "Sua fórmula carrega o equilíbrio entre Madeira ",
         "preco": 155.91
     },
     {
-        "id": 4,
         "nome": "Ma Chérie Jeans",
         "imagem": "https://http2.mlstatic.com/D_NQ_NP_985550-MLU72701407838_112023-O.webp",
         "descricao": " assim, tão confortável quanto usar aquela peça de roupa",
@@ -31,16 +29,22 @@ const produtosEmOferta = [
 ];
 
 
-const carrossel = document.querySelector('.carrossel');
+async function fetchProdutos() {
+    try {
 
-        // Itera sobre cada produto no JSON
+        const response = await fetch('http://localhost:3000/api/produtos');
+        const produtosEmOferta = await response.json();
+
+        const carrossel = document.querySelector('.carrossel');
+
+  
         produtosEmOferta.forEach(produto => {
-            // Cria a div de produto
+
             const produtoDiv = document.createElement('div');
             produtoDiv.classList.add('produto');
-            produtoDiv.id = `produto-${produto.id}`;
+            produtoDiv.id = `produto-${produto._id}`;
 
-            // Adiciona o conteúdo HTML à div de produto
+
             produtoDiv.innerHTML = `
                 <div class="desconto">50% OFF</div>
                 <div class="image-product">
@@ -58,6 +62,45 @@ const carrossel = document.querySelector('.carrossel');
                 </div>
             `;
 
-            // Adiciona a div de produto ao carrossel
+
             carrossel.appendChild(produtoDiv);
         });
+    } catch (error) {
+        console.error('Erro ao buscar produtos:', error);
+    }
+}
+
+
+fetchProdutos();
+
+
+// const carrossel = document.querySelector('.carrossel');
+
+
+//         produtosEmOferta.forEach(produto => {
+
+//             const produtoDiv = document.createElement('div');
+//             produtoDiv.classList.add('produto');
+//             produtoDiv.id = `produto-${produto.id}`;
+
+
+//             produtoDiv.innerHTML = `
+//                 <div class="desconto">50% OFF</div>
+//                 <div class="image-product">
+//                     <img src=${produto.imagem} alt="${produto.nome}">
+//                 </div>
+//                 <div class="descricao-product">
+//                     <div class="informacoes">
+//                         <h3>${produto.nome}</h3>
+//                         <p>${produto.descricao}...</p>
+//                     </div>
+//                     <div class="valor-produtos">
+//                         <s>R$ ${produto.preco.toFixed(2)}</s>
+//                         <span>R$ ${(produto.preco * 0.5).toFixed(2)}</span>
+//                     </div>
+//                 </div>
+//             `;
+
+
+//             carrossel.appendChild(produtoDiv);
+//         });
