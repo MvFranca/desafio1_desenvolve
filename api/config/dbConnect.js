@@ -3,10 +3,7 @@ require('dotenv').config();
 
 async function conectaNaDatabase() {
     
-    mongoose.connect(process.env.URL_CONNECT, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    });
+    mongoose.connect(process.env.URL_CONNECT);
     return mongoose.connection;
 }
 
