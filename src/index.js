@@ -1,34 +1,3 @@
-
-const produtosEmOferta = [
-    {
-        "id": 1,
-        "nome": "Floratta",
-        "imagem": "./src/public/produtos/floratta.png",
-        "descricao": "Floratta Flores Secretas é ideal para encher os dias",
-        "preco": 155.91
-    },
-    {
-        "id": 2,
-        "nome": "Liz Colônia",
-        "imagem": "./src/public/produtos/liz-colonia.webp",
-        "descricao": "uma fragrância feminina intensa e marcante, tra",
-        "preco": 155.91
-    },
-    {
-        "nome": "Floratta",
-        "imagem": "./src/public/produtos/coffe-woman.webp",
-        "descricao": "Sua fórmula carrega o equilíbrio entre Madeira ",
-        "preco": 155.91
-    },
-    {
-        "nome": "Ma Chérie Jeans",
-        "imagem": "https://http2.mlstatic.com/D_NQ_NP_985550-MLU72701407838_112023-O.webp",
-        "descricao": " assim, tão confortável quanto usar aquela peça de roupa",
-        "preco": 155.91
-    }
-];
-
-
 async function fetchProdutos() {
     try {
 

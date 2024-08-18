@@ -3,7 +3,7 @@ require('dotenv').config();
 
 async function conectaNaDatabase() {
     
-    mongoose.connect(process.env.URL_CONNECT);
+    mongoose.connect("mongodb+srv://admin:admin123@cluster0.lwmsmwe.mongodb.net/produtos?retryWrites=true&w=majority&appName=Cluster0");
     return mongoose.connection;
 }
 
