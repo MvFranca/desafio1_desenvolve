@@ -2,8 +2,15 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 async function conectaNaDatabase() {
-    
-    mongoose.connect("mongodb+srv://admin:admin123@cluster0.lwmsmwe.mongodb.net/produtos?retryWrites=true&w=majority&appName=Cluster0");
+    try {
+        await mongoose.connect(process.env.MONGODB_URI, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        });
+        console.log('Conectado ao MongoDB com sucesso!');
+    } catch (error) {
+        console.error('Erro ao conectar ao MongoDB:', error);
+    }
     return mongoose.connection;
 }
 
