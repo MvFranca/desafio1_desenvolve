@@ -1,7 +1,7 @@
 async function fetchProdutos() {
     try {
 
-        const response = await fetch('http://localhost:3000/api/produtos');
+        const response = await fetch('https://desafio1-desenvolve.onrender.com/api/produtos');
         const produtosEmOferta = await response.json();
 
         const carrossel = document.querySelector('.carrossel');

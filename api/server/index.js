@@ -7,8 +7,6 @@ const productGet = require('../controllers/products');
 
 const app = express();
 
-
-
 async function startServer() {
   try {
       const conexao = await conectaNaDatabase();
